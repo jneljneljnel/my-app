@@ -13,7 +13,7 @@ export class AppComponent {
 	protected searchStr: string;
     protected dog: string;
     protected dataService: CompleterData; 
-    protected wishlist = ['Pug'];
+    protected wishlist = [];
     protected empty = false;
     protected existing = false;
     protected breeds = ["Airedale",
