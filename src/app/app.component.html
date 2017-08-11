@@ -6,11 +6,11 @@
 				<ng2-completer [(ngModel)]="dog" [datasource]="breeds" [minSearchLength]="2" [openOnFocus]="false" (focus)="reset()"></ng2-completer>
 			</div>
 		<br>
-		<div *ngIf="empty">
-			<alert type="success"> Please enter a dog!</alert>
+		<div *ngIf="empty"  class="col-xs-12 alert">
+			<alert class="col-xs-12 col-sm-4" type="success"> Please enter a dog!</alert>
 		</div>
-		<div *ngIf="existing">
-			<alert type="success"> Dog already in wishlist!</alert>
+		<div *ngIf="existing" class="col-xs-12 alert">
+			<alert class="col-xs-12 col-sm-4" type="success"> Dog already in wishlist!</alert>
 		</div>
 		<button class='btn btn-primary dogbutton' (click)="add($event , dog)"> Add dog to wishlist</button>
 	</div>
