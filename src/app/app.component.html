@@ -1,3 +1,29 @@
-<h1>
-  {{title}}
-</h1>
+
+<div class='row dogstuff'>
+	<div class="col-xs-12 col-md-6">
+		<h1>Search dog breeds</h1>
+		<ng2-completer [(ngModel)]="dog" [datasource]="breeds" [minSearchLength]="2" [openOnFocus]="false" (focus)="reset()"></ng2-completer>
+		<br>
+		<div *ngIf="empty">
+			<alert type="success"> Please enter a dog!</alert>
+		</div>
+		<div *ngIf="existing">
+			<alert type="success"> Dog already in wishlist!</alert>
+		</div>
+		<button class='btn btn-primary dogbutton' (click)="add($event , dog)"> Add dog to wishlist</button>
+	</div>
+
+
+	<div class="col-xs-12 col-md-6">
+		<h1>Your Wishlist</h1>
+		<ul>
+
+			<div on-mouseover="options=true" on-mouseleave="options=false">
+				<p *ngFor="let dog of wishlist; let i = index" [attr.data-index]="i">
+			      {{ dog }}  <button [hidden]="!options" class="btn btn-xs btn-danger"(click)='remove($event, dog)'>x</button>
+			    </p>
+		    </div>		   
+		</ul>
+	</div>
+</div>
+
