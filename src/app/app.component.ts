@@ -23,7 +23,7 @@ export class AppComponent {
     }
 
 	ngOnInit() {
-		this.breedService.getAll().subscribe(b => this.breeds = b);
+		//this.breedService.getAll().subscribe(b => this.breeds = b);
 	}
 
 	add = (event, dog) => {
