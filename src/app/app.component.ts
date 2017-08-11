@@ -19,7 +19,7 @@ export class AppComponent {
     protected existing = false;
 
 	constructor(private completerService: CompleterService, private breedService: BreedService) {
-    	this.dataService = completerService.local(this.breed);    
+    	this.dataService = completerService.local(this._breeds);    
     }
 
 	ngOnInit() {
@@ -60,7 +60,7 @@ export class AppComponent {
 		this.existing = false;
 	}
 
-  protected breeds = ["Airedale",
+  protected _breeds = ["Airedale",
 							"American Cocker Spaniel",
 							"American Eskimo",
 							"Anatolian Shepherd",
