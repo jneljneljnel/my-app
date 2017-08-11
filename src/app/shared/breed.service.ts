@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class BreedService{
-  private baseUrl: string = 'http://localhost/api/breed';
+  private baseUrl: string = 'https://evening-fortress-65337.herokuapp.com/api/breed';
   constructor(private http : Http){
   }
 
